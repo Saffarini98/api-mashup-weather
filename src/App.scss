@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+/*   border radius */
+$radius: 0.2rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Oxygen, sans-serif;
+  margin: 2rem;
+}
+
+.form {
+  text-align: center;
+  padding: 30px;
+
+    &__label {
+    font-weight: bold;
+    padding: 20px;
+    font-size: 20px;
+    
+  }
+   &__input {
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    
+  }
+
+  &__btn {
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
+  gap: 3rem;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px #e1e5ee;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+
+  &__image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding: 1.5rem;
+  }
+
+  &__description {
+    padding: 0 1.5rem;
+  }
+
+  &__btn {
+    padding: 10px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d50000;
+    background: transparent;
+    color: #d50000;
+    border-radius: $radius;
+    transition: background 200ms ease-in, color 200ms ease-in;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover &__btn {
+    background: #d50000;
+    color: white;
+    cursor: pointer;
+  }
+}
